@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
+/**** Reset ****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**** Style général de la page ****/
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  font-family: "Rubik", sans-serif;
+}
+
+.main__content {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.profile__top {
+  width: 500px;
+  height: 250px;
+  background-image: url("img/city.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.profile__img {
+  background-image: url("img/user.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.profile__bottom {
+  margin-top: 75px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main__infos {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-weight: 700;
+  margin-right: 15px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.grey {
+  color: #999999;
+}
+
+.email {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.city ion-icon {
+  margin-right: 5px;
+  color: #388eff;
+}
+
+.profile__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.stat__item:not(:last-child) {
+  border-right: 1px solid #000000;
+}
+
+.stat {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/**** Responsive design ****/
+
+@media screen and (max-width: 575px) {
+  .main__content {
+    width: 90%;
+  }
+
+  .profile__top {
+    width: 100%;
+  }
+}
